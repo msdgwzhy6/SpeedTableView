@@ -10,8 +10,11 @@ public class MainActivity extends AppCompatActivity {
     private SpeedTableView speedtableview;
 
     private Handler handler;
-    int whattag=666;
-    int i=0;
+    int whattag = 666;
+    int i = 0;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,21 +24,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         speedtableview = (SpeedTableView) findViewById(R.id.speedtableview);
-        handler=new Handler(){
+        handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                if(msg.what==whattag){
-                    if(i<300){
-                        i=i+1;
+                if (msg.what == whattag) {
+                    if (i < 300) {
+                        i = i + 1;
                         speedtableview.setDelta(i);
-                        handler.sendEmptyMessageDelayed(whattag,100);
+                        handler.sendEmptyMessageDelayed(whattag, 100);
                     }
 
                 }
                 super.handleMessage(msg);
             }
         };
-        handler.sendEmptyMessageDelayed(whattag,1000);
+        handler.sendEmptyMessageDelayed(whattag, 1000);
+
 
     }
 }

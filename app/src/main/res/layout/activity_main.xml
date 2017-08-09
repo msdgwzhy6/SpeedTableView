@@ -3,10 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.speedtableview.MainActivity">
 
     <com.speedtableview.SpeedTableView
         android:id="@+id/speedtableview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.speedtableview.SpeedTableView
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <com.speedtableview.ColorArcProgressBar
+        android:id="@+id/colorpro"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

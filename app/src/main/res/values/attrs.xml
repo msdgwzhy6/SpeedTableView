@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="capb_back_color" format="color" />
+        <attr name="capb_front_color1" format="color" />
+        <attr name="capb_front_color2" format="color" />
+        <attr name="capb_front_color3" format="color" />
+    </declare-styleable>
+</resources>
